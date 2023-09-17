@@ -36,11 +36,13 @@ body {
 #note-input {
   height: 100px;
   width: 40%;  
+  text-align: left;
 }
 
-.input {
+#input-container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
 }
 
 #footer {
