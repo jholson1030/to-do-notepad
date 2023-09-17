@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Dahlia';
+    src: url(./Dahlia-BF650061b1d9c43.otf);
+}
+
 body {
     height: calc(100vh - 16px);
     width: 100%;
@@ -5,6 +10,7 @@ body {
     padding: 0;
     background-color: #333333;
     color: white;
+    font-family: 'Dahlia', sans-serif;
 }
 
 #footer {
