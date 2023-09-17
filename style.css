@@ -43,15 +43,20 @@ body {
 
 #note-input {
   height: 100px;
-  width: 40%;  
   resize: none;
   vertical-align: top;
+}
+
+#note-submit {
+    width: 100px;
+    height: 100px;
 }
 
 #input-container {
     display: flex;
     justify-content: start;
     align-items: center;
+    width: calc(100%-100px); ;
 }
 
 #footer {
