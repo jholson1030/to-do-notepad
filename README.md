@@ -7,3 +7,4 @@ Main Objectives:
     - Have an area at the bottom of the page to input text and have that text appear in the note container
     - Have a button next to each note/task that will delete them from the container
     - Have a button next to each note/task to edit them
+    - Make the option to set a timer for certain tasks that are time sensitive 
