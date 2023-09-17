@@ -11,6 +11,21 @@ body {
     background-color: #333333;
     color: white;
     font-family: 'Dahlia', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header {
+    margin: none;
+}
+
+#note-container {
+    height: 70%;
+    width: 50%;
+    border: solid 2px white;
+    border-radius: 10px;
 }
 
 #footer {
