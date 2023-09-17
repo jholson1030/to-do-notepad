@@ -33,6 +33,16 @@ body {
     flex-direction: column;
 }
 
+#note-input {
+  height: 100px;
+  width: 40%;  
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
 #footer {
     display: flex;
     justify-content: center;
