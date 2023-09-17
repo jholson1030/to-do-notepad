@@ -36,7 +36,8 @@ body {
 #note-input {
   height: 100px;
   width: 40%;  
-  text-align: left;
+  resize: none;
+  vertical-align: top;
 }
 
 #input-container {
