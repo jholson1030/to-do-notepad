@@ -43,6 +43,7 @@ body {
 
 #note-input {
   height: 100px;
+  width: 400px;
   resize: none;
   vertical-align: top;
 }
