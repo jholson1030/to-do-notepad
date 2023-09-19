@@ -49,12 +49,24 @@ body {
 }
 
 #note-submit {
-    width: 100px;
-    height: 50px;
-    border-radius: 4px;
-    border: solid 3px firebrick;
-    align-self: flex-start;
-}
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    background-color: #e7eef1;
+    border: solid 10px transparent;
+    border-image: linear-gradient( to top right, firebrick, #333333 );
+    border-image-slice: 1;
+    color: firebrick;
+    transition: all 0.3s ease-in-out;
+  }
+  
+    #note-submit:hover {
+    background-image: linear-gradient( to top right, firebrick, #333333);
+    color: white;
+  }
 
 #input-container {
     display: flex;
