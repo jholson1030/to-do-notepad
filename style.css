@@ -34,6 +34,8 @@ body {
     height: 70%;
     width: 50%;
     border: solid 10px firebrick;
+    border-image: linear-gradient( to top right, firebrick, #333333 );
+    border-image-slice: 1;
     border-radius: 10px;
     display: flex;
     justify-content: center;
