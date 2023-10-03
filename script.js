@@ -35,10 +35,14 @@ function updateNotes() {
     // Append each task to the noteContainer
     noteTasks.forEach(function (task) {
         const taskElement = document.createElement('div');
+        const deleteButton = document.createElement('button');
         taskElement.className = 'task'; // For styling purposes
+        deleteButton.className = 'delete';
         taskElement.textContent = task;
+        deleteButton.textContent = 'X';
 
         // Append the taskElement to the noteContainer
         noteContainer.appendChild(taskElement);
+        noteContainer.appendChild(deleteButton);
     });
 }
