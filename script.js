@@ -24,3 +24,15 @@ noteSubmit.addEventListener('click', function() {
         noteInput.value = '';
     }
 });
+
+function updateNotes () {
+    // Clearing noteContainer first
+    noteContainer.innerHTML = '';
+
+    // Append each task to the noteContainer
+    noteTasks.forEach(function (task) {
+        const taskElement = document.createElement('div');
+        taskElement.className = 'task'; // For styling purposes
+        taskElement.textContent = task;
+    });
+}
