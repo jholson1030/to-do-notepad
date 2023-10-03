@@ -37,10 +37,10 @@ body {
     border-image: linear-gradient( to top right, firebrick, #333333 );
     border-image-slice: 1;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
+}
+
+.task {
+    padding: 5px;
 }
 
 #note-input {
