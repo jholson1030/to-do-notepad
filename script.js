@@ -1,14 +1,17 @@
 // Set variables to all page elements
 
-const noteContainer = document.querySelector('#note-container');
-const noteInput = document.querySelector('#note-input');
-const noteSubmit = document.querySelector('#note-submit');
+const noteContainer = document.getElementById('note-container');
+const noteInput = document.getElementById('note-input');
+const noteSubmit = document.getElementById('note-submit');
 
 // Note array
 let noteTasks = [];
 
 // Listening for a button click
-noteSubmit.addEventListener('click', function() {
+noteSubmit.addEventListener('click', function(event) {
+    // Prevent the default behavior of the form submission
+    event.preventDefault();
+
     // Grab value from the input
     const noteInputValue = noteInput.value.trim();
 
@@ -18,14 +21,14 @@ noteSubmit.addEventListener('click', function() {
         noteTasks.push(noteInputValue);
 
         // Update the DOM
-        updateTasks();
+        updateNotes();
 
         // Clear the input field
         noteInput.value = '';
     }
 });
 
-function updateNotes () {
+function updateNotes() {
     // Clearing noteContainer first
     noteContainer.innerHTML = '';
 
@@ -34,5 +37,8 @@ function updateNotes () {
         const taskElement = document.createElement('div');
         taskElement.className = 'task'; // For styling purposes
         taskElement.textContent = task;
+
+        // Append the taskElement to the noteContainer
+        noteContainer.appendChild(taskElement);
     });
 }
