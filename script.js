@@ -47,28 +47,31 @@ function updateNotes() {
 
         saveTasks();
 
-        // Append taskElement and deleteButton to taskWrapper
-        taskWrapper.appendChild(taskElement);
-        taskWrapper.appendChild(deleteButton);
-
-        // Append the taskElement and deleteButton to the noteContainer
-        noteContainer.appendChild(taskWrapper);
 
         // Delete completed tasks
-        deleteButton.addEventListener('click', function(task) {
+        deleteButton.addEventListener('click', function(event) {
             // Find the index of the task in noteTasks
             const index = noteTasks.indexOf(task);
             if (index > -1) {
                 // Remove the task from noteTasks array
                 noteTasks.splice(index, 1);
             }
+
+            taskWrapper.remove();
             // Update the DOM and local storage
             updateNotes();
             saveTasks();
-        })
-    });
-}
+        });
 
+        // Append taskElement and deleteButton to taskWrapper
+        taskWrapper.appendChild(taskElement);
+        taskWrapper.appendChild(deleteButton);
+
+        // Append the taskElement and deleteButton to the noteContainer
+        noteContainer.appendChild(taskWrapper);
+    });
+    saveTasks();
+}
 
 // Function to save tasks to local storage
 
