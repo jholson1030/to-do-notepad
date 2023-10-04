@@ -39,6 +39,14 @@ body {
     border-radius: 10px;
 }
 
+.task-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20% 0;
+    border: solid 2px whitesmoke;
+    padding: 5px;
+}
+
 .task {
     padding: 5px;
 }
