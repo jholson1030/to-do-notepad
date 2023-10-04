@@ -51,5 +51,10 @@ function updateNotes() {
 
         // Append the taskElement and deleteButton to the noteContainer
         noteContainer.appendChild(taskWrapper);
+
+        // Delete completed tasks
+        deleteButton.addEventListener('click', function(task) {
+            taskWrapper.remove(task);
+        })
     });
 }
