@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     padding: 0;
     background-color: #333333;
-    color: white;
+    color: whitesmoke;
     font-family: 'Dahlia', sans-serif;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,12 @@ body {
 
 .task {
     padding: 5px;
+}
+
+.delete {
+    width: 50px;
+    height: 25px;
+    border: none;
 }
 
 #note-input {
