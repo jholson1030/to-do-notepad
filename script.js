@@ -45,6 +45,8 @@ function updateNotes() {
         taskElement.textContent = task;
         deleteButton.textContent = 'X';
 
+        saveTasks();
+
         // Append taskElement and deleteButton to taskWrapper
         taskWrapper.appendChild(taskElement);
         taskWrapper.appendChild(deleteButton);
@@ -58,3 +60,22 @@ function updateNotes() {
         })
     });
 }
+
+
+// Function to save tasks to local storage
+
+function saveTasks() {
+    localStorage.setItem('noteTasks', JSON.stringify(noteTasks));
+}
+
+// Function to load tasks from local storage
+
+function loadTasks() {
+    const storedTasks = localStorage.getItem('noteTasks');
+    if (storedTasks) {
+        noteTasks = JSON.parse(storedTasks);
+        updateNotes();
+    }
+}
+
+loadTasks();
