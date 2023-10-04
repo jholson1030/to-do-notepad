@@ -34,6 +34,10 @@ function updateNotes() {
 
     // Append each task to the noteContainer
     noteTasks.forEach(function (task) {
+        // Wrapper for the taskElement and deleteButton
+        const taskWrapper = document.createElement('div');
+        taskWrapper.className = 'task-wrapper';
+
         const taskElement = document.createElement('div');
         const deleteButton = document.createElement('button');
         taskElement.className = 'task'; // For styling purposes
@@ -41,8 +45,15 @@ function updateNotes() {
         taskElement.textContent = task;
         deleteButton.textContent = 'X';
 
-        // Append the taskElement to the noteContainer
-        noteContainer.appendChild(taskElement);
-        noteContainer.appendChild(deleteButton);
+        // Wrapping taskElement and deleteButton inside of taskWrapper
+        taskElement.parentNode.insertBefore(taskWrapper, taskElement);
+        deleteButton.parentNode.insertBefore(taskWrapper, deleteButton);
+
+        // Append taskElement and deleteButton to taskWrapper
+        taskWrapper.appendChild(taskElement);
+        taskWrapper.appendChild(deleteButton);
+
+        // Append the taskElement and deleteButton to the noteContainer
+        noteContainer.appendChild(taskWrapper);
     });
 }
