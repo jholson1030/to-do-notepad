@@ -8,3 +8,4 @@ Main Objectives:
     - Have a button next to each note/task that will delete them from the container [x]
     - Have a button next to each note/task to edit them
     - Make the option to set a timer for certain tasks that are time sensitive 
+    - Save tasks to local storage
