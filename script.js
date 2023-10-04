@@ -56,7 +56,15 @@ function updateNotes() {
 
         // Delete completed tasks
         deleteButton.addEventListener('click', function(task) {
-            taskWrapper.remove(task);
+            // Find the index of the task in noteTasks
+            const index = noteTasks.indexOf(task);
+            if (index > -1) {
+                // Remove the task from noteTasks array
+                noteTasks.splice(index, 1);
+            }
+            // Update the DOM and local storage
+            updateNotes();
+            saveTasks();
         })
     });
 }
