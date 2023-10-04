@@ -45,10 +45,6 @@ function updateNotes() {
         taskElement.textContent = task;
         deleteButton.textContent = 'X';
 
-        // Wrapping taskElement and deleteButton inside of taskWrapper
-        taskElement.parentNode.insertBefore(taskWrapper, taskElement);
-        deleteButton.parentNode.insertBefore(taskWrapper, deleteButton);
-
         // Append taskElement and deleteButton to taskWrapper
         taskWrapper.appendChild(taskElement);
         taskWrapper.appendChild(deleteButton);
