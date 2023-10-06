@@ -7,6 +7,9 @@ const noteSubmit = document.getElementById('note-submit');
 // Note array
 let noteTasks = [];
 
+// By default, -1 means no task is being edited
+let editIndex = -1; 
+
 // Listening for a button click
 noteSubmit.addEventListener('click', function(event) {
     // Prevent the default behavior of the form submission
@@ -17,8 +20,16 @@ noteSubmit.addEventListener('click', function(event) {
 
     // Checks if the input is not empty
     if (noteInputValue.length) {
-        // Add the task to the task array
-        noteTasks.push(noteInputValue);
+        if (editIndex !== -1) {
+            // Update the existing task
+            noteTasks[editIndex] = noteInputValue;
+
+            // Reset the editIndex
+            editIndex = -1;
+        } else {
+            // Add the task to the task array
+            noteTasks.push(noteInputValue);
+        }
 
         // Update the DOM
         updateNotes();
