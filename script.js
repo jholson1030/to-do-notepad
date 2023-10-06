@@ -69,6 +69,15 @@ function updateNotes() {
             saveTasks();
         });
 
+        // Edit button event listener
+        editButton.addEventListener('click', function() {
+            // Loads the task back to the HTML textarea for editing
+            noteInput.value = task;
+
+            // Set the index of the task being edited
+            editIndex = noteTasks.indexOf(task);
+        });
+
         // Append taskElement and deleteButton to taskWrapper
         taskWrapper.appendChild(taskElement);
         taskWrapper.appendChild(deleteButton);
