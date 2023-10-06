@@ -93,9 +93,9 @@ function updateNotes() {
         });
 
         // Appends
-        
-        optionWrapper.appendChild(deleteButton);
         optionWrapper.appendChild(editButton);
+        optionWrapper.appendChild(deleteButton);
+        
 
         taskWrapper.appendChild(taskElement);
         taskWrapper.appendChild(optionWrapper);
