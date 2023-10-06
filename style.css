@@ -44,13 +44,27 @@ body {
     height: fit-content;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px 0 5px 20px;
     border: solid 2px whitesmoke;
     padding: 5px;
+    flex-wrap: wrap;
+}
+
+.option-wrapper {
+    width: 100px;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .task {
+    width: 1fr;
     padding: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .delete, .edit {
