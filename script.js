@@ -37,13 +37,19 @@ function updateNotes() {
         // Wrapper for the taskElement and deleteButton
         const taskWrapper = document.createElement('div');
         taskWrapper.className = 'task-wrapper';
-
+        
+        // Task element creation
         const taskElement = document.createElement('div');
-        const deleteButton = document.createElement('button');
-        taskElement.className = 'task'; // For styling purposes
-        deleteButton.className = 'delete';
+        taskElement.className = 'task'; 
         taskElement.textContent = task;
+        // Delete button creation
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete';
         deleteButton.textContent = 'X';
+        // Edit button creation
+        const editButton = document.createElement('button');
+        editButton.className = 'edit';
+        editButton.textContent = 'Edit';
 
         saveTasks();
 
