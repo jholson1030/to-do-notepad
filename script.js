@@ -48,6 +48,9 @@ function updateNotes() {
         // Wrapper for the taskElement and deleteButton
         const taskWrapper = document.createElement('div');
         taskWrapper.className = 'task-wrapper';
+        // Wrapper for the options
+        const optionWrapper = document.createElement('div');
+        optionWrapper.className = 'option-wrapper';
 
         // Task element creation
         const taskElement = document.createElement('div');
@@ -89,13 +92,17 @@ function updateNotes() {
             editIndex = noteTasks.indexOf(task);
         });
 
-        // Append taskElement and deleteButton to taskWrapper
-        taskWrapper.appendChild(taskElement);
-        taskWrapper.appendChild(deleteButton);
-        taskWrapper.appendChild(editButton);
+        // Appends
+        
+        optionWrapper.appendChild(deleteButton);
+        optionWrapper.appendChild(editButton);
 
-        // Append the taskElement and deleteButton to the noteContainer
+        taskWrapper.appendChild(taskElement);
+        taskWrapper.appendChild(optionWrapper);
+
+        // Append the taskElement and optionWrapper to the noteContainer
         noteContainer.appendChild(taskWrapper);
+
     });
     saveTasks();
 }
