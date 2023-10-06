@@ -37,7 +37,7 @@ function updateNotes() {
         // Wrapper for the taskElement and deleteButton
         const taskWrapper = document.createElement('div');
         taskWrapper.className = 'task-wrapper';
-        
+
         // Task element creation
         const taskElement = document.createElement('div');
         taskElement.className = 'task'; 
@@ -72,6 +72,7 @@ function updateNotes() {
         // Append taskElement and deleteButton to taskWrapper
         taskWrapper.appendChild(taskElement);
         taskWrapper.appendChild(deleteButton);
+        taskWrapper.appendChild(editButton);
 
         // Append the taskElement and deleteButton to the noteContainer
         noteContainer.appendChild(taskWrapper);
