@@ -32,11 +32,12 @@ body {
 
 #note-container {
     height: 70%;
-    width: 70%;
+    width: 60%;
     border: solid 10px firebrick;
     border-image: linear-gradient( to top right, firebrick, #333333 );
     border-image-slice: 1;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .task-wrapper {
@@ -56,7 +57,7 @@ body {
     width: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: center;
     flex-grow: 0;
     flex-shrink: 0;
     position: absolute;
@@ -114,6 +115,7 @@ body {
     align-items: center;
     width: calc(100%-100px);
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 #footer {
